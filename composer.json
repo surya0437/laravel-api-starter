@@ -1,11 +1,11 @@
 {
-    "name": "snc/laravel-api-starter",
+    "name": "surya-narayan/laravel-api-starter",
     "description": "A production-ready, reusable Laravel API Starter Kit package",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Surya",
+            "name": "Surya Narayan Chaudhary",
             "email": "surya0437.nc@gmail.com"
         }
     ],

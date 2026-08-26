@@ -28,8 +28,10 @@ class ApiStarterServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'api-starter');
-        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        $this->loadTranslationsFrom(
+            __DIR__.'/../../resources/lang',
+            'api-starter'
+        );
 
         $this->registerRoutes();
         $this->registerPublishing();
@@ -38,7 +40,9 @@ class ApiStarterServiceProvider extends ServiceProvider
 
     protected function registerRoutes(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../../routes/api.php');
+        $this->loadRoutesFrom(
+            __DIR__.'/../../routes/api.php'
+        );
     }
 
     protected function registerPublishing(): void
@@ -48,11 +52,6 @@ class ApiStarterServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../../config/api-starter.php' => config_path('api-starter.php'),
             ], 'api-starter-config');
-
-            // Migrations
-            $this->publishes([
-                __DIR__.'/../../database/migrations' => database_path('migrations'),
-            ], 'api-starter-migrations');
 
             // Routes
             $this->publishes([
@@ -64,10 +63,10 @@ class ApiStarterServiceProvider extends ServiceProvider
                 __DIR__.'/../../resources/lang' => lang_path('vendor/api-starter'),
             ], 'api-starter-translations');
 
-            // Everything tag
+            // Everything
             $this->publishes([
                 __DIR__.'/../../config/api-starter.php' => config_path('api-starter.php'),
-                __DIR__.'/../../database/migrations' => database_path('migrations'),
+                __DIR__.'/../../routes' => base_path('routes/api-starter'),
                 __DIR__.'/../../resources/lang' => lang_path('vendor/api-starter'),
             ], 'api-starter');
         }

@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class InstallApiStarterCommand extends Command
 {
-    protected $signature = 'api-starter:install 
+    protected $signature = 'api-starter:install
                             {--force : Overwrite existing files}
                             {--with-example : Include example CRUD controller, resource, and service}';
 
@@ -22,12 +22,6 @@ class InstallApiStarterCommand extends Command
             '--force' => $this->option('force'),
         ]);
 
-        // Publish migrations
-        $this->call('vendor:publish', [
-            '--tag' => 'api-starter-migrations',
-            '--force' => $this->option('force'),
-        ]);
-
         // Publish translations
         $this->call('vendor:publish', [
             '--tag' => 'api-starter-translations',
@@ -40,10 +34,10 @@ class InstallApiStarterCommand extends Command
 
         $this->newLine();
         $this->info('✅ Laravel API Starter Kit installed successfully!');
+
         $this->comment('Next steps:');
-        $this->line(' 1. Run migrations: php artisan migrate');
-        $this->line(' 2. Check installation status: php artisan api-starter:status');
-        $this->line(' 3. Run health check: php artisan api-starter:health');
+        $this->line(' 1. Check installation status: php artisan api-starter:status');
+        $this->line(' 2. Run health check: php artisan api-starter:health');
 
         return Command::SUCCESS;
     }

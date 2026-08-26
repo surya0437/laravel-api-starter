@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 5
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - src
+        - config
+    ignoreErrors:
+        - '#Trait Surya\\ApiStarter\\Traits\\ApiQueryTrait is used zero times#'

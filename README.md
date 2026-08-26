@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/surya-narayan/laravel-api-starter.svg?style=flat-square)](https://packagist.org/packages/surya-narayan/laravel-api-starter)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/surya0437/laravel-api-starter/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/surya0437/laravel-api-starter/actions)
-[![License](https://img.shields.io/packagist/l/surya-narayan/laravel-api-starter.svg?style=flat-square)](https://github.com/surya0437/laravel-api-starter/blob/main/LICENSE)
+[![License](https://img.shields.io/packagist/l/surya-narayan/laravel-api-starter.svg?style=flat-square)](LICENSE)
 
 A production-ready, reusable Laravel package that provides a clean, Laravel-native foundation for building secure, scalable, and maintainable REST APIs.
 
